@@ -61,9 +61,21 @@ novel-writer/
 │   ├── Mystery_Style.MD  # Mystery style
 │   ├── Historical_Style.MD # Historical style
 │   └── Fantasy_Style.MD  # Fantasy style
-└── WORKSPACE/             # Workspace (auto-created at runtime)
-    ├── CURRENT.MD         # Current progress
+└── WORKSPACE/             # Workspace
+    ├── CURRENT.MD         # Current progress (global)
     └── [Book Name]/       # Project folder
+        ├── AGENT/         # Agent outputs
+        │   └── Inspirer.md
+        ├── CONTENT/       # Chapter content (final version)
+        │   ├── chapter_1.md
+        │   └── ...
+        ├── OUTLINE/       # Full outline
+        │   └── outline.md
+        ├── DETAILED_OUTLINE/ # Chapter detailed outlines
+        │   ├── chapter_1.md
+        │   └── ...
+        └── CURRENT_PROCESS/ # Current progress
+            └── current.md
 ```
 
 ## Usage Examples

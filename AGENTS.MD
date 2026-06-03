@@ -9,6 +9,7 @@
 - **职责**：创意发散，将用户输入拓展为丰富素材
 - **输入**：用户的创意需求（主题、关键词、情感基调等）
 - **输出**：灵感报告
+- **输出路径**：`WORKSPACE/[书名]/AGENT/Inspirer.md`
 - **定义文件**：`AGENTS/Inspirer.MD`
 - **核心技能**：`SKILLS/Creative_Divergence.MD`
 
@@ -16,6 +17,9 @@
 - **职责**：结构设计，将灵感转化为大纲和细纲
 - **输入**：灵感报告
 - **输出**：全书大纲 + 章节细纲
+- **输出路径**：
+  - 全书大纲：`WORKSPACE/[书名]/OUTLINE/outline.md`
+  - 章节细纲：`WORKSPACE/[书名]/DETAILED_OUTLINE/chapter_[X].md`
 - **定义文件**：`AGENTS/Architect.MD`
 - **核心技能**：`SKILLS/Structure_Design.MD`
 
@@ -23,12 +27,14 @@
 - **职责**：内容创作，根据细纲完成章节写作
 - **输入**：章节细纲 + 风格要求
 - **输出**：章节内容
+- **输出路径**：`WORKSPACE/[书名]/CONTENT/chapter_[X].md`
 - **定义文件**：`AGENTS/Writer.MD`
 
 ### 4. 语言润色师（Polisher）
 - **职责**：语言优化，提升内容的文学性和人性化
 - **输入**：章节内容初稿
 - **输出**：润色后的最终版本
+- **输出路径**：`WORKSPACE/[书名]/CONTENT/chapter_[X].md`（覆盖原文件）
 - **定义文件**：`AGENTS/Polisher.MD`
 
 ## 工作流程
@@ -119,13 +125,22 @@ novel-writer/
 │   ├── Mystery_Style.MD  # 悬疑风格
 │   ├── Historical_Style.MD # 历史风格
 │   └── Fantasy_Style.MD  # 玄奇风格
-└── WORKSPACE/             # 工作空间（运行时自动创建）
-    ├── CURRENT.MD         # 当前进度
-    ├── [书名]/            # 项目文件夹
-    │   ├── OUTLINE.MD     # 全书大纲
-    │   ├── CHAPTERS/      # 章节文件夹
-    │   └── GROUPS/        # 分组文件夹（长篇）
-    └── ...
+└── WORKSPACE/             # 工作空间
+    └── [书名]/            # 项目文件夹
+        ├── AGENT/         # 智能体输出
+        │   └── Inspirer.md
+        ├── CONTENT/       # 章节内容
+        │   ├── chapter_1.md
+        │   ├── chapter_2.md
+        │   └── ...
+        ├── OUTLINE/       # 全书大纲
+        │   └── outline.md
+        ├── DETAILED_OUTLINE/ # 章节细纲
+        │   ├── chapter_1.md
+        │   ├── chapter_2.md
+        │   └── ...
+        └── CURRENT_PROCESS/ # 当前进度
+            └── current.md
 ```
 
 ## 使用说明

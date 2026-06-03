@@ -61,9 +61,21 @@ novel-writer/
 │   ├── Mystery_Style.MD  # 悬疑风格
 │   ├── Historical_Style.MD # 历史风格
 │   └── Fantasy_Style.MD  # 玄奇风格
-└── WORKSPACE/             # 工作空间（运行时自动创建）
-    ├── CURRENT.MD         # 当前进度
+└── WORKSPACE/             # 工作空间
+    ├── CURRENT.MD         # 当前进度（全局）
     └── [书名]/            # 项目文件夹
+        ├── AGENT/         # 智能体输出
+        │   └── Inspirer.md
+        ├── CONTENT/       # 章节内容（最终版本）
+        │   ├── chapter_1.md
+        │   └── ...
+        ├── OUTLINE/       # 全书大纲
+        │   └── outline.md
+        ├── DETAILED_OUTLINE/ # 章节细纲
+        │   ├── chapter_1.md
+        │   └── ...
+        └── CURRENT_PROCESS/ # 当前进度
+            └── current.md
 ```
 
 ## 使用示例

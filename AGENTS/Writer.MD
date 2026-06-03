@@ -53,6 +53,11 @@
 - 下章衔接：[与下章的衔接点]
 ```
 
+## 输出路径
+- **章节内容**：`WORKSPACE/[书名]/CONTENT/chapter_[X].md`
+- **文件格式**：Markdown
+- **覆盖策略**：每次新任务覆盖原文件
+
 ## 进度更新
 完成章节后，更新CURRENT.MD：
 ```markdown

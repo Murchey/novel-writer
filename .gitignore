@@ -48,6 +48,10 @@ coverage.xml
 *.cover
 *.py,cover
 .hypothesis/
+
+# Workspace - ignore all except CURRENT.MD
+WORKSPACE/*
+!WORKSPACE/CURRENT.MD
 .pytest_cache/
 cover/
 

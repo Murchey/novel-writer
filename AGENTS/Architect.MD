@@ -100,6 +100,12 @@
 - [风格注意事项]
 ```
 
+## 输出路径
+- **全书大纲**：`WORKSPACE/[书名]/OUTLINE/outline.md`
+- **章节细纲**：`WORKSPACE/[书名]/DETAILED_OUTLINE/chapter_[X].md`
+- **文件格式**：Markdown
+- **覆盖策略**：每次新任务覆盖原文件
+
 ## 长篇连载分组管理
 - 每10章为一个组合
 - 每个组合有独立的细纲文档
